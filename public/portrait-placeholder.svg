@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-label="Portrait placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EEF0F6"/>
+      <stop offset="1" stop-color="#E2E5EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <circle cx="400" cy="430" r="150" fill="#1C39BB"/>
+  <text x="400" y="430" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="120" font-weight="700" text-anchor="middle" dominant-baseline="central" letter-spacing="2">PM</text>
+  <text x="400" y="690" fill="#5A5A60" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="500" text-anchor="middle" letter-spacing="3">PERSIAN MORADI</text>
+  <text x="400" y="735" fill="#9A9AA2" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="middle" letter-spacing="1">Photo coming soon</text>
+</svg>
