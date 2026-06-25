@@ -1,0 +1,30 @@
+# dependencies
+/node_modules
+
+# next.js / build output
+/.next/
+/out/
+/build
+*.tsbuildinfo
+next-env.d.ts
+
+# os / editor junk
+.DS_Store
+*.pem
+.idea
+.vscode
+
+# env & deploy
+.env*.local
+.env
+.vercel
+
+# debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# internal planning docs (kept local, not pushed to GitHub)
+/docs/
+SETUP-REPORT.md
+CLAUDE.md
