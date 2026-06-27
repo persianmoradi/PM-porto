@@ -26,7 +26,7 @@ export function SelectedWork() {
         initial="hidden"
         whileInView="show"
         viewport={inView}
-        className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+        className="mt-12 grid gap-6 sm:grid-cols-2"
       >
         {featuredProjects.map((project, i) => (
           <ProjectCard key={project.slug} project={project} index={i} />

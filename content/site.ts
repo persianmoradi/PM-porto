@@ -16,7 +16,7 @@ export const site = {
     linkedin: "https://www.linkedin.com/in/persian-moradi-30769a337/",
   },
   about: [
-    "I'm Persian — a Web Developer student based in Copenhagen, studying web development at Erhvervsakademiet København (graduating winter 2027).",
+    "I'm Persian — a Web Developer student based in Copenhagen, studying web development at Erhvervsakademiet København (graduating winter 2027). During my internship at Heyra, a Copenhagen AI consultancy, I was the developer on the first launched version of their website — built with Lovable, Cursor and Figma alongside two brand designers and a UX designer.",
     "I care about the details most people scroll past: easing curves, focus states, the rhythm of a type scale. My main passion is for Front-end & Full-stack development, and thats what i see myself working with in the future. I spend a part of every day learning how to build better with AI and large language models to improve my skills and be a better developer.",
     "Right now I'm sharpening my craft and moving toward back-end, so I can ship complete products end to end.",
   ],
