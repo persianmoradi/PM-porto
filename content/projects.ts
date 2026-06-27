@@ -20,13 +20,13 @@ export const projects: Project[] = [
     slug: "heyra",
     title: "Heyra",
     summary:
-      "The first launched version of heyra.io — the public site for a Copenhagen AI consultancy, built during my Lovable internship.",
+      "Heyra's new website (heyra.io) — a full rebuild of the public site for a Copenhagen AI consultancy, developed during my Lovable internship.",
     problem:
-      "Heyra is a Copenhagen AI consultancy that takes AI from prototype to production for enterprise clients. They needed a website that made a deep, complex offering feel clear, credible and premium — the public face of the company at launch.",
+      "Heyra is a Copenhagen AI consultancy that takes AI from prototype to production for enterprise clients. Their existing site no longer matched where the company was heading, so they commissioned a complete redesign — a new public face that made a deep, complex offering feel clear, credible and premium.",
     build:
-      "During my internship at Heyra (as a Lovable intern), I was the developer on version 1 of the site, working in a small team with two brand designers and an in-house UX designer. I built it using Lovable, Cursor and Figma — turning the branding and UX direction into a fast, responsive, content-rich site covering the offerings, the Problem → Prototype → Production method, case studies and a detailed tech stack.",
+      "During my internship at Heyra (as a Lovable intern), I was the developer on the new website, working in a small team with two brand designers and an in-house UX designer. I built it using Lovable, Cursor and Figma — turning the new branding and UX direction into a fast, responsive, content-rich site covering the offerings, the Problem → Prototype → Production method, case studies and a detailed tech stack.",
     outcome:
-      "Shipped and launched as Heyra's official website — my first time building inside a professional design-and-engineering team and delivering on time.",
+      "Shipped and launched as Heyra's new official website, replacing the previous one — my first time building inside a professional design-and-engineering team and delivering on time.",
     tags: ["Lovable", "Cursor", "Figma", "Internship"],
     links: { live: "https://heyra.io" },
     year: "2025",
