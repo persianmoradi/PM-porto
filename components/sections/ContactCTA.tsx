@@ -22,8 +22,9 @@ export function ContactCTA() {
           Let&apos;s build something worth shipping.
         </h2>
         <p className="max-w-measure text-body-lg text-ink-soft">
-          I&apos;m open to Front-end, Full-stack roles — full-time or alongside my studies — and the
-          occasional freelance project. The fastest way to reach me is email.
+          I&apos;m a web developer keen on AI product development and front-end — open to roles and
+          internships, full-time or alongside my studies, plus the occasional freelance project. The
+          fastest way to reach me is email.
         </p>
         <Link
           href={`mailto:${site.email}`}

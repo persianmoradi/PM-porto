@@ -34,7 +34,7 @@ export function Hero() {
             variants={item}
             className="max-w-[16ch] font-display text-display font-bold text-ink"
           >
-            Front-end, Full-stack &amp; Design Engineer.
+            Web developer, focused on AI products &amp; front-end.
           </motion.h1>
 
           <motion.p
