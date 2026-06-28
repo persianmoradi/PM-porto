@@ -2,28 +2,49 @@
 
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import { Moon, Sun } from "lucide-react";
+import { Monitor, Sun, Moon } from "lucide-react";
+
+const options = [
+  { value: "system", label: "Follow system theme", Icon: Monitor },
+  { value: "light", label: "Light theme", Icon: Sun },
+  { value: "dark", label: "Dark theme", Icon: Moon },
+] as const;
 
 export function ThemeToggle() {
-  const { resolvedTheme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);
 
-  const isDark = resolvedTheme === "dark";
+  // Avoid hydration mismatch: no active state until mounted on the client.
+  const current = mounted ? theme ?? "system" : undefined;
 
   return (
-    <button
-      type="button"
-      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-      onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="glass inline-flex h-9 w-9 items-center justify-center rounded-full text-ink"
+    <div
+      role="group"
+      aria-label="Color theme"
+      className="glass inline-flex items-center gap-0.5 rounded-full p-0.5"
     >
-      {mounted ? (
-        isDark ? <Sun size={16} /> : <Moon size={16} />
-      ) : (
-        <span className="h-4 w-4" />
-      )}
-    </button>
+      {options.map(({ value, label, Icon }) => {
+        const active = current === value;
+        return (
+          <button
+            key={value}
+            type="button"
+            aria-label={label}
+            aria-pressed={active}
+            onClick={() => setTheme(value)}
+            className={
+              "inline-flex h-7 w-7 items-center justify-center rounded-full transition-colors " +
+              (active
+                ? "bg-accent text-white"
+                : "text-ink-soft hover:text-ink")
+            }
+          >
+            <Icon size={14} />
+          </button>
+        );
+      })}
+    </div>
   );
 }
