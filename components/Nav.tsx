@@ -34,7 +34,7 @@ export function Nav() {
           <ThemeToggle />
           <Link
             href={`mailto:${site.email}`}
-            className="rounded-full bg-accent px-4 py-2 text-small font-medium text-white transition-colors hover:bg-accent-hover"
+            className="glass glass-accent rounded-full px-4 py-2 text-small font-medium"
           >
             Hire me
           </Link>
@@ -47,7 +47,7 @@ export function Nav() {
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-line text-ink"
+            className="glass inline-flex h-9 w-9 items-center justify-center rounded-full text-ink"
           >
             {open ? <X size={18} /> : <Menu size={18} />}
           </button>
@@ -70,7 +70,7 @@ export function Nav() {
             <Link
               href={`mailto:${site.email}`}
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex w-fit rounded-full bg-accent px-4 py-2 text-small font-medium text-white"
+              className="glass glass-accent mt-2 inline-flex w-fit rounded-full px-4 py-2 text-small font-medium"
             >
               Hire me
             </Link>

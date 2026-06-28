@@ -55,6 +55,56 @@
   }
 }
 
+/* ---- Liquid glass buttons ---- */
+@layer components {
+  .glass {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: color-mix(in srgb, var(--surface) 50%, transparent);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border: 1px solid color-mix(in srgb, var(--ink) 14%, transparent);
+    box-shadow:
+      inset 0 1px 0 0 color-mix(in srgb, #ffffff 45%, transparent),
+      0 8px 24px -14px rgba(0, 0, 0, 0.4);
+  }
+
+  .glass-accent {
+    color: #ffffff;
+    background: linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--accent) 92%, transparent),
+      color-mix(in srgb, var(--accent) 68%, transparent)
+    );
+    border: 1px solid color-mix(in srgb, #ffffff 32%, transparent);
+    box-shadow:
+      inset 0 1px 0 0 color-mix(in srgb, #ffffff 45%, transparent),
+      0 10px 30px -12px color-mix(in srgb, var(--accent) 70%, transparent);
+  }
+
+  /* Light sweep on hover — sits above the tint, below the label */
+  .glass::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+      120deg,
+      transparent 30%,
+      color-mix(in srgb, #ffffff 35%, transparent) 50%,
+      transparent 70%
+    );
+    transform: translateX(-130%);
+    transition: transform 0.6s ease;
+    pointer-events: none;
+  }
+
+  .glass:hover::after {
+    transform: translateX(130%);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

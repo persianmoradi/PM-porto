@@ -53,7 +53,7 @@ export default function CaseStudy({ params }: { params: { slug: string } }) {
               href={project.links.live}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-small font-medium text-white hover:bg-accent-hover"
+              className="glass glass-accent inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-small font-medium"
             >
               Visit live <ArrowUpRight size={15} />
             </Link>
@@ -63,7 +63,7 @@ export default function CaseStudy({ params }: { params: { slug: string } }) {
               href={project.links.repo}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-line px-5 py-2.5 text-small font-medium text-ink hover:bg-surface"
+              className="glass inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-small font-medium text-ink"
             >
               View code <ArrowUpRight size={15} />
             </Link>

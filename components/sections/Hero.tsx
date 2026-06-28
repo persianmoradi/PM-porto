@@ -47,13 +47,13 @@ export function Hero() {
           <motion.div variants={item} className="mt-10 flex flex-wrap items-center gap-4">
             <Link
               href="#work"
-              className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-small font-medium text-white transition-colors hover:bg-accent-hover"
+              className="glass glass-accent inline-flex items-center gap-2 rounded-full px-6 py-3 text-small font-medium"
             >
               See selected work <ArrowDownRight size={16} />
             </Link>
             <Link
               href={`mailto:${site.email}`}
-              className="inline-flex items-center rounded-full border border-line px-6 py-3 text-small font-medium text-ink transition-colors hover:bg-surface"
+              className="glass inline-flex items-center rounded-full px-6 py-3 text-small font-medium text-ink"
             >
               Hire me
             </Link>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
+import { LocalClock } from "@/components/LocalClock";
 import { site } from "@/content/site";
 
 const socials = [
@@ -12,6 +13,9 @@ const socials = [
 export function Footer() {
   return (
     <footer className="border-t border-line">
+      <div className="mx-auto max-w-content px-6 pt-12 md:px-10">
+        <LocalClock />
+      </div>
       <div className="mx-auto flex max-w-content flex-col gap-6 px-6 py-12 md:flex-row md:items-center md:justify-between md:px-10">
         <Logo />
         <nav className="flex flex-wrap gap-x-6 gap-y-2">

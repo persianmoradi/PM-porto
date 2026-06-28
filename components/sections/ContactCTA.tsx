@@ -27,7 +27,7 @@ export function ContactCTA() {
         </p>
         <Link
           href={`mailto:${site.email}`}
-          className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-body font-medium text-white transition-colors hover:bg-accent-hover"
+          className="glass glass-accent inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-body font-medium"
         >
           {site.email} <ArrowUpRight size={18} />
         </Link>

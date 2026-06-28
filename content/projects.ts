@@ -29,7 +29,7 @@ export const projects: Project[] = [
       "Shipped and launched as Heyra's new official website, replacing the previous one — my first time building inside a professional design-and-engineering team and delivering on time.",
     tags: ["Lovable", "Cursor", "Figma", "Internship"],
     links: { live: "https://heyra.io" },
-    year: "2025",
+    year: "2026",
     featured: true,
   },
   {
@@ -61,7 +61,7 @@ export const projects: Project[] = [
       "A deployed, working prototype that takes a clear, defensible stance on AI in education — delivered as my main exam project and a demonstration of product thinking, not just a feature.",
     tags: ["Next.js", "AI / LLMs", "Claude Code", "Prototype"],
     links: { live: "https://multimediedesign-hovedeksamen.vercel.app/" },
-    year: "2025",
+    year: "2026",
     featured: true,
   },
   {
