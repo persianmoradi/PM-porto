@@ -11,9 +11,11 @@ export function Portrait({
   // Tailwind object-position class. Controls which part of a tall photo stays
   // in frame so the hair/top of the head isn't cropped.
   position = "object-center",
+  priority = false,
 }: {
   sizes: string;
   position?: string;
+  priority?: boolean;
 }) {
   const [src, setSrc] = useState(site.portrait);
 
@@ -23,6 +25,7 @@ export function Portrait({
       alt={`Portrait of ${site.name}`}
       fill
       sizes={sizes}
+      priority={priority}
       className={`object-cover ${position}`}
       unoptimized={src.endsWith(".svg")}
       onError={() => setSrc(PLACEHOLDER)}

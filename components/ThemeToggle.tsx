@@ -21,8 +21,8 @@ export function ThemeToggle() {
 
   return (
     <div
-      role="group"
-      aria-label="Color theme"
+      role="radiogroup"
+      aria-label="Colour theme"
       className="glass inline-flex items-center gap-0.5 rounded-full p-0.5"
     >
       {options.map(({ value, label, Icon }) => {
@@ -31,13 +31,14 @@ export function ThemeToggle() {
           <button
             key={value}
             type="button"
+            role="radio"
             aria-label={label}
-            aria-pressed={active}
+            aria-checked={active}
             onClick={() => setTheme(value)}
             className={
               "inline-flex h-7 w-7 items-center justify-center rounded-full transition-colors " +
               (active
-                ? "bg-accent text-white"
+                ? "bg-accent-solid text-white"
                 : "text-ink-soft hover:text-ink")
             }
           >

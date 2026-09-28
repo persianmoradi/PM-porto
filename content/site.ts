@@ -20,26 +20,28 @@ export const site = {
     "What pulls me most is AI product development — designing, prototyping, and building data- and AI-driven products. I love working where product thinking, design craft, front-end, and emerging AI tools meet, rather than staying in one narrow lane.",
     "Front-end is where I do most of my building today, and I'm looking forward to growing into full-stack development through my education. I spend part of every day getting better at building with AI and large language models.",
   ],
-  skills: [
-    "AI Product Development",
-    "React",
-    "TypeScript",
-    "JavaScript",
-    "HTML",
-    "CSS",
-    "Git",
-    "GitHub",
-    "Tailwind CSS",
-    "Next.js",
-    "Supabase",
-    "AI / LLMs",
-    "Claude-Code",
-    "Lovable",
-    "UX/UI / Motion",
-    "Cursor/VSCode",
-    "Figma",
-    "Backend Development (in progress)",
+  // Grouped rather than one flat list: the clustering itself signals that you
+  // understand your own stack, and it survives a 10-second scan.
+  skillGroups: [
+    {
+      label: "AI & product",
+      items: ["AI product development", "AI / LLMs", "Claude Code", "Lovable", "Cursor"],
+    },
+    {
+      label: "Front-end",
+      items: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "HTML", "CSS"],
+    },
+    {
+      label: "Design",
+      items: ["Figma", "UX / UI", "Motion"],
+    },
+    {
+      label: "Data & tooling",
+      items: ["Supabase", "Git", "GitHub"],
+    },
   ],
+  // Stated as forward momentum, not as a gap.
+  learning: ["Full-stack / backend", "Node.js", "Postgres"],
 };
 
 export type Site = typeof site;

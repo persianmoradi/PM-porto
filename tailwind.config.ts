@@ -13,10 +13,14 @@ const config: Config = {
         paper: "var(--paper)",
         ink: "var(--ink)",
         "ink-soft": "var(--ink-soft)",
+        "ink-faint": "var(--ink-faint)",
         line: "var(--line)",
         surface: "var(--surface)",
         accent: "var(--accent)",
         "accent-hover": "var(--accent-hover)",
+        // Deep enough to carry white text at AA in both themes; --accent is
+        // tuned for legibility as text, so it must not be used as a bg.
+        "accent-solid": "var(--accent-to)",
       },
       fontFamily: {
         display: ["var(--font-display)", "ui-sans-serif", "sans-serif"],
@@ -32,6 +36,7 @@ const config: Config = {
         body: ["1rem", { lineHeight: "1.6" }],
         small: ["0.875rem", { lineHeight: "1.5" }],
         label: ["0.8125rem", { lineHeight: "1", letterSpacing: "0.08em" }],
+        micro: ["0.6875rem", { lineHeight: "1.4", letterSpacing: "0.06em" }],
       },
       maxWidth: {
         content: "1200px",

@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { Section, Eyebrow } from "@/components/Section";
 import { site } from "@/content/site";
-import { Portrait } from "@/components/Portrait";
 import { fadeUp, stagger, inView } from "@/lib/motion";
 
 export function About() {
@@ -14,37 +13,54 @@ export function About() {
         initial="hidden"
         whileInView="show"
         viewport={inView}
-        className="grid gap-12 md:grid-cols-[1fr_1.2fr]"
+        className="grid gap-12 md:grid-cols-[0.8fr_1.2fr] md:gap-16"
       >
         <motion.div variants={fadeUp}>
           <Eyebrow>About</Eyebrow>
           <h2 className="mt-4 font-display text-h1 font-bold text-ink">
             {site.location}.
           </h2>
-
-          {site.portrait && (
-            <div className="relative mt-8 aspect-[4/5] w-full max-w-[20rem] overflow-hidden rounded-2xl border border-line bg-surface">
-              <Portrait sizes="(max-width: 768px) 80vw, 320px" position="object-top" />
-            </div>
-          )}
+          <p className="mt-6 max-w-[26ch] text-body text-ink-soft">
+            {site.role}
+          </p>
         </motion.div>
 
-        <motion.div variants={fadeUp} className="space-y-5">
-          {site.about.map((p, i) => (
-            <p key={i} className="max-w-measure text-body-lg text-ink-soft">
-              {p}
-            </p>
-          ))}
-
-          <div className="flex flex-wrap gap-2 pt-4">
-            {site.skills.map((s) => (
-              <span
-                key={s}
-                className="rounded-full border border-line px-3 py-1 font-mono text-[0.6875rem] uppercase tracking-wide text-ink"
-              >
-                {s}
-              </span>
+        <motion.div variants={fadeUp}>
+          <div className="space-y-5">
+            {site.about.map((p, i) => (
+              <p key={i} className="max-w-measure text-body-lg text-ink-soft">
+                {p}
+              </p>
             ))}
+          </div>
+
+          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+            {site.skillGroups.map((group) => (
+              <div key={group.label}>
+                <h3 className="font-mono text-micro uppercase text-accent">
+                  {group.label}
+                </h3>
+                <ul className="mt-3 flex flex-wrap gap-2">
+                  {group.items.map((item) => (
+                    <li
+                      key={item}
+                      className="rounded-full border border-line bg-surface/40 px-3 py-1 text-micro text-ink backdrop-blur-sm"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 flex flex-wrap items-center gap-2 border-t border-line pt-6">
+            <span className="font-mono text-micro uppercase text-ink-faint">
+              Currently learning
+            </span>
+            <span className="text-micro text-ink-soft">
+              {site.learning.join(" · ")}
+            </span>
           </div>
         </motion.div>
       </motion.div>
