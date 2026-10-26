@@ -65,18 +65,18 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    slug: "investment-intelligence",
-    title: "AI Investeringsintelligens",
+    slug: "farda-foundation",
+    title: "FARDA Foundation",
     summary:
-      "A personal tool that scores companies as sector-relative percentiles from real filings and market data.",
+      "The site for FARDA, my own Copenhagen web studio that builds websites and web apps for small businesses with no site, or a site that needs fixing.",
     problem:
-      "Retail investors drown in raw financials. Comparing companies within a sector is noisy and slow, and most tools either oversimplify or bury you in numbers — while quietly implying advice.",
+      "Many small companies have no website, or one that is slow, dated and invisible on Google. Agencies are expensive and slow, and put account managers between the business and the person doing the work. FARDA needed a site that proves the pitch: a fast, clear offer with transparent pricing and one obvious way to get in touch.",
     build:
-      "I built a pipeline that pulls fundamentals from SEC EDGAR and prices from Stooq, computes monthly sector-relative percentile scores, and surfaces them in a clean dashboard. Framed explicitly as research, not personal investment advice — the user makes every decision. Built with React and Claude Code.",
+      "I designed and built the studio's single-page site in Danish: a bold, minimal look with large uppercase type, numbered sections and anchor navigation. It covers two fixed-price packages (Essential and Advanced), selected cases, the four-step process from strategy to launch, and a no-commitment call booking. Deployed on Vercel.",
     outcome:
-      "A live, self-updating project spanning data pipeline, scoring logic and frontend — my clearest end-to-end piece, and proof I can ship a complete product solo.",
-    tags: ["React", "AI / LLMs", "Data", "Claude Code"],
-    links: { live: "https://investment-intelligence-five.vercel.app/" },
+      "Live as the public face of my own company, and it works as a case study in itself: the same speed, SEO and design standard I deliver to clients.",
+    tags: ["Own company", "Web design", "SEO", "Vercel"],
+    links: { live: "https://farda-foundation.vercel.app/" },
     year: "2026",
     featured: true,
   },
