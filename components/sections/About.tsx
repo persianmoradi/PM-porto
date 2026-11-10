@@ -1,67 +1,69 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Section, Eyebrow } from "@/components/Section";
+import { Section } from "@/components/Section";
 import { site } from "@/content/site";
 import { fadeUp, stagger, inView } from "@/lib/motion";
 
 export function About() {
   return (
-    <Section id="about" className="border-t border-line">
+    <Section id="about">
       <motion.div
         variants={stagger}
         initial="hidden"
         whileInView="show"
         viewport={inView}
-        className="grid gap-12 md:grid-cols-[0.8fr_1.2fr] md:gap-16"
+        className="grid gap-12 md:grid-cols-[0.9fr_1.1fr] md:gap-16"
       >
+        {/* The left column stays light on purpose: the sculpture parks here. */}
         <motion.div variants={fadeUp}>
-          <Eyebrow>About</Eyebrow>
-          <h2 className="mt-4 font-display text-h1 font-bold text-ink">
-            {site.location}.
+          <h2 className="font-display text-display font-bold uppercase text-ink">
+            About
           </h2>
-          <p className="mt-6 max-w-[26ch] text-body text-ink-soft">
-            {site.role}
+          <p className="mt-6 max-w-[26ch] text-body-lg text-ink-soft">
+            {site.role}. {site.location}.
           </p>
         </motion.div>
 
-        <motion.div variants={fadeUp}>
+        <motion.div variants={fadeUp} className="panel rounded-2xl p-6 md:p-10">
           <div className="space-y-5">
             {site.about.map((p, i) => (
-              <p key={i} className="max-w-measure text-body-lg text-ink-soft">
+              <p
+                key={i}
+                className={
+                  i === 0
+                    ? "max-w-measure text-body-lg text-ink"
+                    : "max-w-measure text-body text-ink-soft"
+                }
+              >
                 {p}
               </p>
             ))}
           </div>
 
-          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+          <dl className="mt-10 border-t border-line">
             {site.skillGroups.map((group) => (
-              <div key={group.label}>
-                <h3 className="font-mono text-micro uppercase text-accent">
+              <div
+                key={group.label}
+                className="grid gap-1 border-b border-line py-4 sm:grid-cols-[10rem_1fr] sm:gap-6"
+              >
+                <dt className="text-small font-medium text-accent">
                   {group.label}
-                </h3>
-                <ul className="mt-3 flex flex-wrap gap-2">
-                  {group.items.map((item) => (
-                    <li
-                      key={item}
-                      className="rounded-full border border-line bg-surface/40 px-3 py-1 text-micro text-ink backdrop-blur-sm"
-                    >
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                </dt>
+                <dd className="text-small text-ink-soft">
+                  {group.items.join(", ")}
+                </dd>
               </div>
             ))}
-          </div>
-
-          <div className="mt-8 flex flex-wrap items-center gap-2 border-t border-line pt-6">
-            <span className="font-mono text-micro uppercase text-ink-faint">
-              Currently learning
-            </span>
-            <span className="text-micro text-ink-soft">
-              {site.learning.join(" · ")}
-            </span>
-          </div>
+            <div className="grid gap-1 py-4 sm:grid-cols-[10rem_1fr] sm:gap-6">
+              <dt className="text-small font-medium text-accent">
+                Currently learning
+              </dt>
+              <dd className="text-small text-ink-soft">
+                {site.learning.join(", ")}
+              </dd>
+            </div>
+          </dl>
         </motion.div>
       </motion.div>
     </Section>

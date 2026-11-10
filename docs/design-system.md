@@ -1,3 +1,12 @@
+> **Superseded 2026-11-10 — fixed-look redesign.** The site now has one theme (no light/dark
+> switch): raven black `#0b0c10`, powder blue `#b3d4ea` (accent), poppy red `#e8402f`
+> (highlight / primary CTA), frost `#eef1f4` (text). Tokens live in `app/globals.css`.
+> Glass, gradient text and eyebrow labels are gone. The centrepiece is a scroll-driven
+> WebGL sculpture (`components/Sculpture.tsx`, three + @react-three/fiber) behind every
+> page; Lenis provides smooth scroll; "Selected work" is a pinned horizontal reel on
+> md+ and a plain list on mobile / reduced motion. Colour and glass sections below
+> describe the previous design.
+
 # Phase 4 — Design System
 
 _Project: persian-portefølje · Date: 2026-06-25 · Direction: refined-minimal canvas,

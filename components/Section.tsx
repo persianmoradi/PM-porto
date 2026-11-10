@@ -16,11 +16,3 @@ export function Section({
     </section>
   );
 }
-
-export function Eyebrow({ children }: { children: ReactNode }) {
-  return (
-    <span className="font-mono text-label uppercase tracking-[0.08em] text-accent">
-      {children}
-    </span>
-  );
-}

@@ -17,7 +17,7 @@ export default function OpengraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "#0a0a0c",
+          background: "#0b0c10",
           padding: "72px",
           position: "relative",
         }}
@@ -32,7 +32,7 @@ export default function OpengraphImage() {
             height: 760,
             borderRadius: 9999,
             background:
-              "radial-gradient(circle, rgba(59,79,216,0.55), rgba(10,10,12,0) 68%)",
+              "radial-gradient(circle, rgba(179,212,234,0.32), rgba(11,12,16,0) 68%)",
           }}
         />
         <div
@@ -44,7 +44,7 @@ export default function OpengraphImage() {
             height: 640,
             borderRadius: 9999,
             background:
-              "radial-gradient(circle, rgba(109,40,217,0.45), rgba(10,10,12,0) 68%)",
+              "radial-gradient(circle, rgba(232,64,47,0.42), rgba(11,12,16,0) 68%)",
           }}
         />
 
@@ -53,7 +53,7 @@ export default function OpengraphImage() {
             style={{
               fontSize: 30,
               fontWeight: 700,
-              color: "#f4f4f0",
+              color: "#eef1f4",
               letterSpacing: "-0.02em",
             }}
           >
@@ -61,7 +61,7 @@ export default function OpengraphImage() {
           </div>
           {/* Drawn, not typed: the ★ glyph is absent from Satori's default
               font and would trigger a network font fetch. */}
-          <svg width="26" height="26" viewBox="0 0 32 32" fill="#7b8fff">
+          <svg width="26" height="26" viewBox="0 0 32 32" fill="#b3d4ea">
             <path d="M16 6 L18.47 12.60 L25.51 12.91 L19.99 17.30 L21.88 24.09 L16 20.20 L10.12 24.09 L12.01 17.30 L6.49 12.91 L13.53 12.60 Z" />
           </svg>
         </div>
@@ -71,7 +71,7 @@ export default function OpengraphImage() {
             style={{
               fontSize: 72,
               fontWeight: 700,
-              color: "#f4f4f0",
+              color: "#eef1f4",
               lineHeight: 1.05,
               letterSpacing: "-0.035em",
               maxWidth: 940,
@@ -83,7 +83,7 @@ export default function OpengraphImage() {
             style={{
               marginTop: 32,
               fontSize: 28,
-              color: "#a0a0a8",
+              color: "#a9b1bd",
               letterSpacing: "0.02em",
             }}
           >
@@ -95,7 +95,7 @@ export default function OpengraphImage() {
           style={{
             height: 4,
             width: "100%",
-            background: "linear-gradient(to right, #3b4fd8, rgba(59,79,216,0))",
+            background: "linear-gradient(to right, #e8402f, rgba(232,64,47,0))",
           }}
         />
       </div>

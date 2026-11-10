@@ -1,7 +1,6 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: "class",
   content: [
     "./app/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -17,10 +16,7 @@ const config: Config = {
         line: "var(--line)",
         surface: "var(--surface)",
         accent: "var(--accent)",
-        "accent-hover": "var(--accent-hover)",
-        // Deep enough to carry white text at AA in both themes; --accent is
-        // tuned for legibility as text, so it must not be used as a bg.
-        "accent-solid": "var(--accent-to)",
+        poppy: "var(--poppy)",
       },
       fontFamily: {
         display: ["var(--font-display)", "ui-sans-serif", "sans-serif"],
@@ -28,6 +24,8 @@ const config: Config = {
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
       fontSize: {
+        // The wordmark only: sized to span the viewport, like a livery.
+        mega: ["clamp(3.75rem, 18.5vw, 20rem)", { lineHeight: "0.86", letterSpacing: "-0.035em" }],
         display: ["clamp(3rem, 8vw, 6rem)", { lineHeight: "1.02", letterSpacing: "-0.03em" }],
         h1: ["clamp(2.25rem, 4vw, 3rem)", { lineHeight: "1.08", letterSpacing: "-0.02em" }],
         h2: ["clamp(1.75rem, 3vw, 2rem)", { lineHeight: "1.12", letterSpacing: "-0.01em" }],
