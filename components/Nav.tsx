@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { ThemeToggle } from "@/components/ThemeToggle";
 import { Logo } from "@/components/Logo";
 import { site } from "@/content/site";
 import { cn } from "@/lib/utils";
@@ -27,7 +26,7 @@ export function Nav() {
     restDelta: 0.001,
   });
 
-  // Swap in the glass treatment once the page has moved.
+  // Give the bar a backing once content scrolls under it.
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
     onScroll();
@@ -74,9 +73,9 @@ export function Nav() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-40 transition-colors duration-300",
+        "fixed inset-x-0 top-0 z-40 transition-colors duration-300",
         scrolled
-          ? "border-b border-line/60 bg-paper/60 backdrop-blur-xl backdrop-saturate-150"
+          ? "border-b border-line/60 bg-paper/75 backdrop-blur-md"
           : "border-b border-transparent",
       )}
     >
@@ -101,17 +100,16 @@ export function Nav() {
                 <motion.span
                   layoutId="nav-active"
                   aria-hidden
-                  className="absolute inset-x-3 -bottom-0.5 h-px bg-accent"
+                  className="absolute inset-x-3 -bottom-0.5 h-px bg-poppy"
                   transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
                 />
               )}
             </Link>
           ))}
           <div className="ml-4 flex items-center gap-3">
-            <ThemeToggle />
             <Link
               href={`mailto:${site.email}`}
-              className="glass glass-accent rounded-full px-4 py-2 text-small font-medium"
+              className="btn px-4 py-2 text-small"
             >
               Hire me
             </Link>
@@ -119,14 +117,13 @@ export function Nav() {
         </div>
 
         <div className="flex items-center gap-2 md:hidden">
-          <ThemeToggle />
           <button
             type="button"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             aria-controls="mobile-menu"
             onClick={() => setOpen((v) => !v)}
-            className="glass inline-flex h-9 w-9 items-center justify-center rounded-full text-ink"
+            className="btn h-10 w-10 justify-center"
           >
             {open ? <X size={18} /> : <Menu size={18} />}
           </button>
@@ -137,7 +134,7 @@ export function Nav() {
       <motion.div
         aria-hidden
         style={{ scaleX: progress }}
-        className="absolute bottom-0 left-0 h-px w-full origin-left bg-gradient-to-r from-accent to-accent/30"
+        className="absolute bottom-0 left-0 h-px w-full origin-left bg-poppy"
       />
 
       <AnimatePresence>
@@ -148,7 +145,7 @@ export function Nav() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden border-t border-line bg-paper/80 backdrop-blur-xl md:hidden"
+            className="overflow-hidden border-t border-line bg-paper md:hidden"
           >
             <div className="flex flex-col gap-1 px-6 py-4">
               {links.map((l) => (
@@ -164,7 +161,7 @@ export function Nav() {
               <Link
                 href={`mailto:${site.email}`}
                 onClick={() => setOpen(false)}
-                className="glass glass-accent mt-3 inline-flex w-fit rounded-full px-4 py-2 text-small font-medium"
+                className="btn btn-primary mt-3 w-fit px-4 py-2 text-small"
               >
                 Hire me
               </Link>

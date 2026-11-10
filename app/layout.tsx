@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import "lenis/dist/lenis.css";
 import "./globals.css";
-import { Providers } from "./providers";
 import { Nav } from "@/components/Nav";
-import { Atmosphere } from "@/components/Atmosphere";
+import { Backdrop } from "@/components/Backdrop";
 import { Footer } from "@/components/sections/Footer";
 import { site } from "@/content/site";
 import { display, body, mono } from "@/lib/fonts";
@@ -48,7 +48,6 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      suppressHydrationWarning
       className={`${display.variable} ${body.variable} ${mono.variable}`}
     >
       <body className="font-sans antialiased">
@@ -56,18 +55,16 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
-        <Providers>
-          <a
-            href="#main"
-            className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-accent-solid focus:px-4 focus:py-2 focus:text-white"
-          >
-            Skip to content
-          </a>
-          <Atmosphere />
-          <Nav />
-          <main id="main">{children}</main>
-          <Footer />
-        </Providers>
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-poppy focus:px-4 focus:py-2 focus:text-paper"
+        >
+          Skip to content
+        </a>
+        <Backdrop />
+        <Nav />
+        <main id="main">{children}</main>
+        <Footer />
       </body>
     </html>
   );
