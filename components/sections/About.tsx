@@ -1,9 +1,40 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Portrait } from "@/components/Portrait";
 import { Section } from "@/components/Section";
 import { site } from "@/content/site";
 import { fadeUp, stagger, inView } from "@/lib/motion";
+
+function StackRow({
+  label,
+  items,
+  muted = false,
+}: {
+  label: string;
+  items: string[];
+  muted?: boolean;
+}) {
+  return (
+    <div className="grid gap-2 border-b border-line py-4 last:border-b-0 sm:grid-cols-[10rem_1fr] sm:gap-6">
+      <dt className="text-small font-medium text-accent">{label}</dt>
+      <dd>
+        <ul className="flex flex-wrap gap-2">
+          {items.map((item) => (
+            <li
+              key={item}
+              className={`rounded-full border border-line px-3 py-1 text-small ${
+                muted ? "text-ink-soft" : "text-ink"
+              }`}
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
+      </dd>
+    </div>
+  );
+}
 
 export function About() {
   return (
@@ -15,7 +46,6 @@ export function About() {
         viewport={inView}
         className="grid gap-12 md:grid-cols-[0.9fr_1.1fr] md:gap-16"
       >
-        {/* The left column stays light on purpose: the sculpture parks here. */}
         <motion.div variants={fadeUp}>
           <h2 className="font-display text-display font-bold uppercase text-ink">
             About
@@ -23,6 +53,11 @@ export function About() {
           <p className="mt-6 max-w-[26ch] text-body-lg text-ink-soft">
             {site.role}. {site.location}.
           </p>
+
+          {/* The cut-out is 4:5, so it fills the frame exactly. */}
+          <div className="panel relative mt-10 aspect-[4/5] max-w-sm overflow-hidden rounded-2xl">
+            <Portrait sizes="(max-width: 768px) 90vw, 384px" position="object-bottom" />
+          </div>
         </motion.div>
 
         <motion.div variants={fadeUp} className="panel rounded-2xl p-6 md:p-10">
@@ -43,26 +78,9 @@ export function About() {
 
           <dl className="mt-10 border-t border-line">
             {site.skillGroups.map((group) => (
-              <div
-                key={group.label}
-                className="grid gap-1 border-b border-line py-4 sm:grid-cols-[10rem_1fr] sm:gap-6"
-              >
-                <dt className="text-small font-medium text-accent">
-                  {group.label}
-                </dt>
-                <dd className="text-small text-ink-soft">
-                  {group.items.join(", ")}
-                </dd>
-              </div>
+              <StackRow key={group.label} label={group.label} items={group.items} />
             ))}
-            <div className="grid gap-1 py-4 sm:grid-cols-[10rem_1fr] sm:gap-6">
-              <dt className="text-small font-medium text-accent">
-                Currently learning
-              </dt>
-              <dd className="text-small text-ink-soft">
-                {site.learning.join(", ")}
-              </dd>
-            </div>
+            <StackRow label="Currently learning" items={site.learning} muted />
           </dl>
         </motion.div>
       </motion.div>

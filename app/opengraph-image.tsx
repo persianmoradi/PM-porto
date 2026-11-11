@@ -77,7 +77,7 @@ export default function OpengraphImage() {
               maxWidth: 940,
             }}
           >
-            Web developer building AI products with front-end craft.
+            Web developer building interactive 3D websites and AI-native products.
           </div>
           <div
             style={{
