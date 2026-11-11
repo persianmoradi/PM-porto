@@ -6,6 +6,36 @@ import { Section } from "@/components/Section";
 import { site } from "@/content/site";
 import { fadeUp, stagger, inView } from "@/lib/motion";
 
+function StackRow({
+  label,
+  items,
+  muted = false,
+}: {
+  label: string;
+  items: string[];
+  muted?: boolean;
+}) {
+  return (
+    <div className="grid gap-2 border-b border-line py-4 last:border-b-0 sm:grid-cols-[10rem_1fr] sm:gap-6">
+      <dt className="text-small font-medium text-accent">{label}</dt>
+      <dd>
+        <ul className="flex flex-wrap gap-2">
+          {items.map((item) => (
+            <li
+              key={item}
+              className={`rounded-full border border-line px-3 py-1 text-small ${
+                muted ? "text-ink-soft" : "text-ink"
+              }`}
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
+      </dd>
+    </div>
+  );
+}
+
 export function About() {
   return (
     <Section id="about">
@@ -48,26 +78,9 @@ export function About() {
 
           <dl className="mt-10 border-t border-line">
             {site.skillGroups.map((group) => (
-              <div
-                key={group.label}
-                className="grid gap-1 border-b border-line py-4 sm:grid-cols-[10rem_1fr] sm:gap-6"
-              >
-                <dt className="text-small font-medium text-accent">
-                  {group.label}
-                </dt>
-                <dd className="text-small text-ink-soft">
-                  {group.items.join(", ")}
-                </dd>
-              </div>
+              <StackRow key={group.label} label={group.label} items={group.items} />
             ))}
-            <div className="grid gap-1 py-4 sm:grid-cols-[10rem_1fr] sm:gap-6">
-              <dt className="text-small font-medium text-accent">
-                Currently learning
-              </dt>
-              <dd className="text-small text-ink-soft">
-                {site.learning.join(", ")}
-              </dd>
-            </div>
+            <StackRow label="Currently learning" items={site.learning} muted />
           </dl>
         </motion.div>
       </motion.div>

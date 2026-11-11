@@ -42,12 +42,12 @@ export function Hero() {
         style={{ ["--d" as string]: "650ms" }}
       >
         <div>
-          <p className="max-w-[24ch] font-display text-h2 font-semibold text-ink">
-            Web developer building AI products with front-end craft.
+          <p className="max-w-[28ch] font-display text-h2 font-semibold text-ink">
+            Web developer building interactive 3D websites and AI-native products.
           </p>
           <p className="mt-3 max-w-[46ch] text-small text-ink-soft">
             {liveCount} products shipped live. Interned at Heyra, a Copenhagen
-            AI consultancy. Graduating EK Copenhagen in 2027.
+            AI consultancy.
           </p>
         </div>
 

@@ -37,9 +37,11 @@ export function ContactCTA() {
           variants={fadeUp}
           className="mt-8 max-w-[58ch] text-body-lg text-ink-soft"
         >
-          I&apos;m a web developer keen on AI product development and front-end,
-          open to roles and internships, full-time or alongside my studies, plus
-          the occasional freelance project. The fastest way to reach me is email.
+          I am actively seeking work in front-end, back-end, full-stack, AI
+          engineering and AI-native development. I am currently looking for a
+          student assistant position alongside my studies, and would welcome the
+          chance to complete my internship placement after summer 2027 with the
+          same company. The fastest way to reach me is by email.
         </motion.p>
 
         <motion.div

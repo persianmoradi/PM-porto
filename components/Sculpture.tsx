@@ -135,8 +135,8 @@ const HERO: Pose = { x: 0, y: 0.02, s: 0.92, heat: 0.1, amp: 0.2 };
 const STATEMENT: Pose = { x: 0.36, y: -0.05, s: 0.6, heat: 0.15, amp: 0.26 };
 const WORK_IN: Pose = { x: 0.38, y: -0.34, s: 0.45, heat: 0.25, amp: 0.3 };
 const WORK_OUT: Pose = { x: -0.38, y: 0.34, s: 0.45, heat: 0.4, amp: 0.3 };
-const ABOUT: Pose = { x: 0.44, y: 0.34, s: 0.5, heat: 0.5, amp: 0.24 };
-const CONTACT: Pose = { x: 0.25, y: -0.7, s: 1.2, heat: 1, amp: 0.34 };
+const ABOUT: Pose = { x: 0.56, y: 0.3, s: 0.5, heat: 0.5, amp: 0.24 };
+const CONTACT: Pose = { x: 0.3, y: -0.86, s: 1.2, heat: 1, amp: 0.34 };
 // Case studies and 404: parked top-right, out of the reading column.
 const ELSEWHERE: Pose = { x: 0.4, y: 0.3, s: 0.42, heat: 0.35, amp: 0.26 };
 
