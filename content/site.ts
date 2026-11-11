@@ -6,8 +6,8 @@ export const site = {
     "A web developer drawn to AI product development and front-end craft — I love building where product thinking, design, and emerging AI tools meet.",
   location: "Copenhagen, Denmark",
   status: "Web development student at EK Copenhagen · open to work",
-  // Photo lives at /public/persian.jpg. (Falls back to the placeholder if missing.)
-  portrait: "/persian.jpg",
+  // Background-removed photo shown in the About section.
+  portrait: "/portrait/me.webp",
   email: "persianmoradi5@gmail.com",
   url: "https://persianmoradi.dev",
   links: {

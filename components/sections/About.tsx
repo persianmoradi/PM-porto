@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Portrait } from "@/components/Portrait";
 import { Section } from "@/components/Section";
 import { site } from "@/content/site";
 import { fadeUp, stagger, inView } from "@/lib/motion";
@@ -15,7 +16,6 @@ export function About() {
         viewport={inView}
         className="grid gap-12 md:grid-cols-[0.9fr_1.1fr] md:gap-16"
       >
-        {/* The left column stays light on purpose: the sculpture parks here. */}
         <motion.div variants={fadeUp}>
           <h2 className="font-display text-display font-bold uppercase text-ink">
             About
@@ -23,6 +23,11 @@ export function About() {
           <p className="mt-6 max-w-[26ch] text-body-lg text-ink-soft">
             {site.role}. {site.location}.
           </p>
+
+          {/* The cut-out is 4:5, so it fills the frame exactly. */}
+          <div className="panel relative mt-10 aspect-[4/5] max-w-sm overflow-hidden rounded-2xl">
+            <Portrait sizes="(max-width: 768px) 90vw, 384px" position="object-bottom" />
+          </div>
         </motion.div>
 
         <motion.div variants={fadeUp} className="panel rounded-2xl p-6 md:p-10">
