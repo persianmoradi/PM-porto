@@ -49,18 +49,18 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    slug: "ministeriets-ai-platform",
-    title: "Ministeriets AI-Platform",
+    slug: "earthy",
+    title: "Earthy",
     summary:
-      "My multimedia-design main exam: an AI learning platform for Danish upper-secondary schools, designed so AI supports thinking instead of replacing it.",
+      "An interactive 3D flight through 13.8 billion years, from the Big Bang to the Earth of today, built with Three.js.",
     problem:
-      "Generative AI makes it trivially easy for students to offload the actual thinking. Schools (STX, HTX, HHX) don't need another answer-machine — they need AI that strengthens learning rather than short-circuiting it.",
+      "Cosmic history spans 13.8 billion years, a span that is hard to grasp as a list of dates. I wanted to tell it as a journey you fly through rather than a timeline you read.",
     build:
-      "I designed and prototyped a 'scaffolding AI' built on two ideas: Friction by Design — deliberately adding productive friction instead of instant answers — and the Socratic method, where the AI questions and guides rather than solves. An account-based web app you can sign up for and explore freely, built with Next.js and Claude Code.",
+      "A single-page 3D experience built with Three.js, with custom shaders and textures. It opens on a loading screen where you choose to enter with sound or silent. A counter then runs from the Big Bang toward today while you drag to spin and select markers to move through dated events: the first stars, the Milky Way, the birth of the Sun, a molten early Earth, the origin of oceans and life, and the dinosaur extinction. It closes at 'Home', placing human existence at the very end of the timeline.",
     outcome:
-      "A deployed, working prototype that takes a clear, defensible stance on AI in education — delivered as my main exam project and a demonstration of product thinking, not just a feature.",
-    tags: ["Next.js", "AI / LLMs", "Claude Code", "Prototype"],
-    links: { live: "https://multimediedesign-hovedeksamen.vercel.app/" },
+      "Live at earthy-sigma.vercel.app as a finished, deployed 3D experience, and a direct demonstration of the interactive 3D websites I aim to build.",
+    tags: ["Three.js", "WebGL", "3D", "Interactive"],
+    links: { live: "https://earthy-sigma.vercel.app/" },
     year: "2026",
     featured: true,
   },
