@@ -46,8 +46,7 @@ export function Hero() {
             Web developer building interactive 3D websites and AI-native products.
           </p>
           <p className="mt-3 max-w-[46ch] text-small text-ink-soft">
-            {liveCount} products shipped live. Interned at Heyra, a Copenhagen
-            AI consultancy.
+            {liveCount} products shipped live.
           </p>
         </div>
 

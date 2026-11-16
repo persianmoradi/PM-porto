@@ -16,7 +16,7 @@ export const site = {
     linkedin: "https://www.linkedin.com/in/persian-moradi-30769a337/",
   },
   about: [
-    "I am Persian Moradi, a web development student at Erhvervsakademiet København (EK) in Copenhagen, graduating in winter 2027. I completed an internship at Heyra, a Copenhagen AI consultancy, where I was the developer on the company's new website.",
+    "I am Persian Moradi, a web development student at Erhvervsakademiet København (EK) in Copenhagen, graduating in winter 2027.",
     "My main interests are front-end and full-stack development, alongside AI engineering and AI-native development. I also enjoy practising end-to-end product development and building iOS apps, and I continually expand my stack and skills.",
   ],
   // Grouped rather than one flat list: the clustering itself signals that you
