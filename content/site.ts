@@ -6,8 +6,8 @@ export const site = {
     "A web developer who strives to build distinctive, interactive 3D websites, and who is equally capable of delivering something simple, professional and elegant.",
   location: "Copenhagen, Denmark",
   status: "Web development student at EK Copenhagen · actively seeking work",
-  // Background-removed photo shown in the About section.
-  portrait: "/portrait/me.webp",
+  // Photo shown in the About section.
+  portrait: "/portrait/me.jpg",
   email: "persianmoradi5@gmail.com",
   url: "https://persianmoradi.dev",
   links: {
