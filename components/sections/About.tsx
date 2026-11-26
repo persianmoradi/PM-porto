@@ -54,9 +54,9 @@ export function About() {
             {site.role}. {site.location}.
           </p>
 
-          {/* The cut-out is 4:5, so it fills the frame exactly. */}
-          <div className="panel relative mt-10 aspect-[4/5] max-w-sm overflow-hidden rounded-2xl">
-            <Portrait sizes="(max-width: 768px) 90vw, 384px" position="object-bottom" />
+          {/* The photo is 3:4, so it fills the frame without cropping. */}
+          <div className="panel relative mt-10 aspect-[3/4] max-w-sm overflow-hidden rounded-2xl">
+            <Portrait sizes="(max-width: 768px) 90vw, 384px" />
           </div>
         </motion.div>
 
